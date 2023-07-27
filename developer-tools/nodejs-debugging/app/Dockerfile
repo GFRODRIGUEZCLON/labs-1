@@ -1,8 +1,8 @@
-FROM node:8.2.1-alpine
+FROM node:18-buster
 
 WORKDIR /code
 
-RUN npm install -g nodemon@1.11.0
+RUN npm install -g nodemon
 
 COPY package.json /code/package.json
 RUN npm install && npm ls
